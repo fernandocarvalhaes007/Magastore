@@ -1,0 +1,39 @@
+@startuml
+entity Cliente {
+    + UUID idCliente
+    + String nome
+    + String email
+    + String telefone
+    + String cpf
+    + LocalDateTime dataCadastro
+}
+
+entity Produto {
+    + UUID idProduct
+    + String name
+    + String description
+    + BigDecimal costValue
+    + BigDecimal saleValue
+    + int stockQuantity
+    + LocalDateTime entryDate
+    + LocalDateTime updateDate
+}
+
+entity Faturamento {
+    + UUID idFaturamento
+    + String nome
+    + String cpf
+    + String telefone
+    + String numeroNf
+    + LocalDateTime dataVenda
+    + UUID codigoProduto
+    + String descricao
+    + String produto
+    + BigDecimal valorVenda
+    + BigDecimal valorDesconto
+    + UUID clienteId
+}
+
+Cliente ||--o{ Faturamento : possui
+Produto ||--o{ Faturamento : inclui
+@enduml

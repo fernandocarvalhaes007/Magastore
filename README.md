@@ -62,6 +62,7 @@ A MagaVendas API é uma aplicação desenvolvida para fornecer serviços REST pa
     spring.datasource.password=sua senha
     spring.jpa.hibernate.ddl-auto=update
     spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+    
     ```
 
 ## Instalação
