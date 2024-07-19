@@ -13,7 +13,7 @@
 A MagaVendas API é uma aplicação desenvolvida para fornecer serviços REST para cadastros e consultas de clientes e produtos. A aplicação permite realizar operações de CRUD em clientes, cadastro de produtos com detalhes específicos, compras de produtos por clientes, e listagem detalhada de produtos incluindo quantidade vendida, estoque e lucro.
 
 
-## Fucionalidades
+## Funcionalidades
 
 - CRUD de Clientes 
   - Criar, ler, atualizar e deletar clientes.
@@ -38,8 +38,19 @@ A MagaVendas API é uma aplicação desenvolvida para fornecer serviços REST pa
 - Java 17
 - Spring Boot 3.3.1
 - PostgreSQL 16.3.2
+- Maven
 
 # Configuração do Projeto
+
+## Estrutura do Projeto
+
+
+- `com.magastoreapi.controllers`: Contém os controladores REST que expõem os endpoints da API.
+- `com.magastoreapi.models`: Contém as classes de modelo que representam as entidades do banco de dados.
+- `com.magastoreapi.dtos`: Contém as classes de Data Transfer Object (DTO) usadas para transferir dados entre o cliente e o servidor.
+- `com.magastoreapi.repositories`: Contém as interfaces de repositório para acesso aos dados.
+- `com.magastoreapi.services`: Contém as classes de serviço que implementam a lógica de negócio.
+
 
 ## Banco de Dados
   
@@ -52,6 +63,7 @@ A MagaVendas API é uma aplicação desenvolvida para fornecer serviços REST pa
 
     ```bash
      CREATE DATABASE magastoreapi
+
     ```
    <br>
 3. Configure as credenciais do banco de dados no arquivo application.properties:
@@ -82,7 +94,75 @@ A MagaVendas API é uma aplicação desenvolvida para fornecer serviços REST pa
 
 # Documentação da API
 
--- em construcao --
+- A aplicação estará disponível em http://localhost:8080
+
+
+## Endpoints da API
+- Clientes
+
+  - GET /clientes: Lista todos os clientes.
+  - POST /clientes: Cria um novo cliente.
+  - GET /clientes/{id}: Obtém um cliente específico pelo ID.
+  - PUT /clientes/{id}: Atualiza um cliente específico pelo ID.
+  - DELETE /clientes/{id}: Remove um cliente específico pelo ID.
+
+- Produtos
+  - GET /produtos: Lista todos os produtos.
+  - POST /produtos: Cria um novo produto.
+  - GET /produtos/{id}: Obtém um produto específico pelo ID.
+  - PUT /produtos/{id}: Atualiza um produto específico pelo ID.
+  - DELETE /produtos/{id}: Remove um produto específico pelo ID.
+
+- Faturamentos
+  - POST /faturamentos: Registra uma nova compra.
+  - GET /faturamentos: Lista todos os faturamentos.
+
+
+# Exemplo de Requisição
+
+## Criar um Cliente
+ ```bash
+ POST /clientes
+ Content-Type: application/json
+
+  {
+    "nome": "João Silva",
+    "email": "joao.silva@example.com",
+    "telefone": "123456789"
+                          }
+  ```
+
+## Criar um Produto
+
+   ```bash
+POST /produtos
+Content-Type: application/json
+
+     {
+    "nome": "Dell",
+    "descricao": " INSPRON 433, WIN10, SSD240GB, RAM 8GB",
+    "valorCusto": 3000.00,
+    "quantidadeEstoque": 1
+                      }
+
+  ```
+
+## Criar um Produto
+
+
+   ```bash
+POST /faturamentos
+Content-Type: application/json
+
+{
+    "clienteId": "d1672d79-a325-4437-bfce-46d8551d76a0",
+    "produtoId": "c7568ec4-bccd-42c7-9f85-c1f5d7d7033c",
+    "valorPedido": 7000.00,
+    "valorDesconto": 400.00,
+    "quantidadeVendida": 1
+                               }
+  ```
+
 
 
 

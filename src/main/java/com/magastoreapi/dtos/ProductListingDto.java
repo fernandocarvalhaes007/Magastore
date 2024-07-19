@@ -1,32 +1,18 @@
-package com.magastoreapi.models;
+package com.magastoreapi.dtos;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name = "TB_PRODUTOS")
-public class ProductModel {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class ProductListingDto {
     private UUID idProduct;
-
     private String nome;
     private String descricao;
     private BigDecimal valorCusto;
     private BigDecimal valorVenda;
     private BigDecimal margemLucro;
     private int quantidadeEstoque;
-    private LocalDateTime dataEntrada;
-    private LocalDateTime dataAtualizacao;
+    
 
-   
     public UUID getIdProduct() {
         return idProduct;
     }
@@ -82,32 +68,4 @@ public class ProductModel {
     public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
-
-    public LocalDateTime getDataEntrada() {
-        return dataEntrada;
-    }
-
-    public void setDataEntrada(LocalDateTime dataEntrada) {
-        this.dataEntrada = dataEntrada;
-    }
-
-    public LocalDateTime getDataAtualizacao() {
-        return dataAtualizacao;
-    }
-
-    public void setDataAtualizacao(LocalDateTime dataAtualizacao) {
-        this.dataAtualizacao = dataAtualizacao;
-    }
-
-
-
-  
-public void calcularMargemLucro() {
-    if (valorVenda != null && valorCusto != null && valorVenda.compareTo(valorCusto) >= 0) {
-        this.margemLucro = valorVenda.subtract(valorCusto);
-    } else {
-        this.margemLucro = BigDecimal.ZERO;
-    }
-}
-
 }
