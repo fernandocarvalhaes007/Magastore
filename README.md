@@ -134,7 +134,7 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
                           }
   ```
 
-## Registrar uma Compra
+## Criar um Produto 
 
    ```bash
 POST /produtos
@@ -149,7 +149,7 @@ Content-Type: application/json
 
   ```
 
-## Criar um Produto
+## Registrar uma Compra
 
 
    ```bash
