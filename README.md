@@ -98,7 +98,7 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
 
 
 ## Endpoints da API
-- Clientes
+- Cadastro de clientes
 
   - GET /clientes: Lista todos os clientes.
   - POST /clientes: Cria um novo cliente.
@@ -106,7 +106,7 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
   - PUT /clientes/{id}: Atualiza um cliente específico pelo ID.
   - DELETE /clientes/{id}: Remove um cliente específico pelo ID.
 
-- Produtos
+- Cadastro de produtos
   - GET /produtos: Lista todos os produtos.
   - POST /produtos: Cria um novo produto.
   - GET /produtos/{id}: Obtém um produto específico pelo ID.
@@ -117,6 +117,8 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
   - POST /faturamentos: Registra uma nova compra.
   - GET /faturamentos: Lista todos os faturamentos.
 
+- Listagem de produtos/estoque
+  -GET /lista-de-produtos: Lista produtos com detalhes de vendas, estoque e lucro
 
 # Exemplo de Requisição
 
@@ -132,7 +134,7 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
                           }
   ```
 
-## Criar um Produto
+## Registrar uma Compra
 
    ```bash
 POST /produtos
