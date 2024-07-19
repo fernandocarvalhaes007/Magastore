@@ -10,7 +10,7 @@
 
 ## Descrição
 
-A MagaVendas API é uma aplicação desenvolvida para fornecer serviços REST para cadastros e consultas de clientes e produtos. A aplicação permite realizar operações de CRUD em clientes, cadastro de produtos com detalhes específicos, compras de produtos por clientes, e listagem detalhada de produtos incluindo quantidade vendida, estoque e lucro.
+A Magastore API é uma aplicação desenvolvida para fornecer serviços REST para cadastros e consultas de clientes e produtos. A aplicação permite realizar operações de CRUD em clientes, cadastro de produtos com detalhes específicos, compras de produtos por clientes, e listagem detalhada de produtos incluindo quantidade vendida, estoque e lucro.
 
 
 ## Funcionalidades
@@ -21,7 +21,7 @@ A MagaVendas API é uma aplicação desenvolvida para fornecer serviços REST pa
 - Cadastro de Produtos 
   - Quantidade em estoque
   - Valor de custo
-  - Margem de lucro
+
 
 - Compra de Produtos
   - Permite a compra de produtos por um cliente.
