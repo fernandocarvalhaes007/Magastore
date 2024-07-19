@@ -118,7 +118,7 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
   - GET /faturamentos: Lista todos os faturamentos.
 
 - Listagem de produtos/estoque
-  -GET /lista-de-produtos: Lista produtos com detalhes de vendas, estoque e lucro
+  - GET /lista-de-produtos: Lista produtos com detalhes de vendas, estoque e lucro
 
 # Exemplo de Requisição
 
