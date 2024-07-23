@@ -63,7 +63,7 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
 
 ```bash
 
-     CREATE DATABASE magastoreapi
+    CREATE DATABASE magastoreapi
 
 ```
    <br>
@@ -71,11 +71,11 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
 
 ```bash
 
-    spring.datasource.url= jdbc:postgresql://localhost:5432/magastoreapi
-    spring.datasource.username=postgres
-    spring.datasource.password=sua senha
-    spring.jpa.hibernate.ddl-auto=update
-    spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+      spring.datasource.url= jdbc:postgresql://localhost:5432/magastoreapi
+      spring.datasource.username=postgres
+      spring.datasource.password=sua senha
+      spring.jpa.hibernate.ddl-auto=update
+      spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
     
 ```
 
