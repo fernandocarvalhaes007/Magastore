@@ -61,36 +61,43 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
 <br>
 <br>
 
-    ```bash
+```bash
+
      CREATE DATABASE magastoreapi
 
-    ```
+```
    <br>
 3. Configure as credenciais do banco de dados no arquivo application.properties:
 
-    ```bash
+```bash
+
     spring.datasource.url= jdbc:postgresql://localhost:5432/magastoreapi
     spring.datasource.username=postgres
     spring.datasource.password=sua senha
     spring.jpa.hibernate.ddl-auto=update
     spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
     
-    ```
+```
 
 ## Instalação
 
 1. Clone o repositório:
    
-    ```bash
+```bash
+
     git clone https://github.com/fernandocarvalhaes007/Magastore.git
     cd magastoreapi 
-    ```
+
+```
 
 2. Compile e execute a aplicação:
-     ```bash
+
+```bash
+
        mvn clean install
        mvn spring-boot:run
-     ```
+
+```
 
 # Documentação da API
 
