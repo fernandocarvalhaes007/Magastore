@@ -123,7 +123,7 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
 # Exemplo de Requisição
 
 ## Criar um Cliente
- ```bash
+```bash
  POST /clientes
  Content-Type: application/json
 
@@ -132,38 +132,52 @@ A Magastore API é uma aplicação desenvolvida para fornecer serviços REST par
     "email": "joao.silva@example.com",
     "telefone": "123456789"
                           }
-  ```
+```
 
 ## Criar um Produto 
 
-   ```bash
-POST /produtos
-Content-Type: application/json
 
-     {
+```bash
+
+ POST /produtos
+ Content-Type: application/json
+
+  {
     "nome": "Dell",
     "descricao": " INSPRON 433, WIN10, SSD240GB, RAM 8GB",
     "valorCusto": 3000.00,
     "quantidadeEstoque": 1
                       }
 
-  ```
+```
 
 ## Registrar uma Compra
 
 
-   ```bash
-POST /faturamentos
-Content-Type: application/json
+```bash
 
-{
-    "clienteId": "d1672d79-a325-4437-bfce-46d8551d76a0",
-    "produtoId": "c7568ec4-bccd-42c7-9f85-c1f5d7d7033c",
-    "valorPedido": 7000.00,
-    "valorDesconto": 400.00,
-    "quantidadeVendida": 1
-                               }
-  ```
+ POST /faturamentos
+ Content-Type: application/json
+
+ {
+   "clienteId": "351b44c1-14ab-4d69-9ded-0655dbe06781",
+   "itens": [
+             {
+              "produtoId": "814a1b64-bc8a-4dcd-b3c0-e39ca9586b71",
+              "quantidade": 1,
+              "valorPedido": 5000.00,
+              "valorDesconto": 300.00
+             },
+              {
+                "produtoId": "de4f628d-9bca-45cd-a1c5-78c12a46b10e",
+                "quantidade": 2,
+                "valorPedido": 6000.00,
+                "valorDesconto": 300.00
+              }
+           ]
+        }
+
+```
 
 
 
