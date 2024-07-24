@@ -9,7 +9,7 @@ public class ItemFaturamentoDto {
     private BigDecimal valorPedido;
     private BigDecimal valorDesconto;
 
-    // Getters and Setters
+
     public UUID getProdutoId() {
         return produtoId;
     }
